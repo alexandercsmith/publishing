@@ -28,12 +28,28 @@ Run Migration to Database
 $ rails db:migrate
 ```
 
-Include Module in Model
+## Usage
+
+Model
 ```ruby
 include Publishing
 ```
 
-Publish Method
+Controller
 ```ruby
-@model.publish_toggle
+def publish
+  @model = Model.find(params[:id])
+  @model.publish_toggle
+  ...
+end
+```
+
+View
+```ruby
+= link_to @model.publish_link, model_publish_path(@model), method: :put
+```
+
+Route
+```ruby
+put '/model/:id/publish' => 'model#publish'
 ```
