@@ -32,3 +32,8 @@ Include Module in Model
 ```ruby
 include Publishing
 ```
+
+Publish Method
+```ruby
+@model.publish_toggle
+```
