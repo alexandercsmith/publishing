@@ -35,6 +35,11 @@ Model
 include Publishing
 ```
 
+Controller Params
+```ruby
+params.require(:model).permit(:published, :published_at)
+```
+
 Queries
 ```ruby
 # All Models where published: true
@@ -53,7 +58,7 @@ Model.is_published.published_asc
 Model.is_published.published_desc
 ```
 
-Controller
+Controller Action
 ```ruby
 def publish
   @model = Model.find(params[:id])
