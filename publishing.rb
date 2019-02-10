@@ -30,23 +30,29 @@ module Publishing
     end
 
     # @model.publish_check
+    # => true: 'published'
+    # => false: 'unpublished'
     def publish_check
       published ? 'published' : 'unpublished'
     end
 
     # @model.publish_link
+    # => true: 'unpublish'
+    # => false: 'publish'
     def publish_link
       published ? 'unpublish' : 'publish'
     end
 
     # @model.published_date
     # => Month 00, 0000
+    # => i.e. January 1, 2000
     def publish_date
       published ? published_at.strftime('%B %e, %Y') : 'DRAFT'
     end
 
     # @model.published_time
-    # => 0:00 AM | PM
+    # => 00:00 AM | PM
+    # => i.e. 4:00 AM
     def publish_time
       published ? published_at.strftime('%I:%M %p') : 'DRAFT'
     end
