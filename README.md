@@ -16,12 +16,6 @@ Migration to Model
 $ rails g migration AddPublishingTo{MODEL} published:boolean published_at:datetime
 ```
 
-Edit Migration File
-```ruby
-...
-t.boolean "published", default: false
-...
-```
 
 Run Migration to Database
 ```
