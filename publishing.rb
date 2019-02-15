@@ -72,12 +72,10 @@ module Publishing
 
     private
 
-    # Verify Object has attributes: :published, :published_at
     def check_attr
       has_attribute?(:published) && has_attribute?(:published_at)
     end
 
-    # Migration Warning
     def migration_warning
       logger.warn "[Simple Publish] - WARNING - #{self.class.name.capitalize} Migrations Pending"
       logger.warn "[Simple Publish] - WARNING - #{self.class.name.capitalize} missing column :published" unless self.has_attribute?(:published)
