@@ -4,6 +4,9 @@
 
 Publishing Module for Ruby on Rails Model's.
 
+* Publish Records with a Boolean and Datetime
+* When making Edits and Publishing again, Datetime value is not updated
+
 ## Install
 
 Location of Module
@@ -13,7 +16,7 @@ Location of Module
 
 Migration to Model
 ```
-$ rails g migration AddPublishingTo{MODEL} published:boolean published_at:datetime
+$ rails g migration AddPublishingTo{MODEL} published:boolean published_at:datetime:index
 ```
 
 
