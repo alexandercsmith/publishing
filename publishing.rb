@@ -15,23 +15,25 @@ module Publishing
 
     # @model.publish
     # Skips Validations
-    def publish
+    def publish(valid)
       migration_warning unless check_attr
-      update_attribute(:published, 1)
-      update_attribute(:published_at, Time.now) if published_at.nil?
+      update(:published, 1)
+      update(:published_at, Time.now) if published_at.nil?
+      save(validate: valid)
     end
 
     # @model.unpublish
     # Skips Validations
-    def unpublish
+    def unpublish(valid)
       migration_warning unless check_attr
-      update_attribute(:published, 0)
+      update(:published, 0)
+      save(validate: valid)
     end
 
     # @model.publish_toggle
-    def publish_toggle
+    def publish_toggle(valid = false)
       migration_warning unless check_attr
-      published ?  unpublish : publish
+      published ?  unpublish(valid) : publish(valid)
     end
 
     # @model.publish_check
