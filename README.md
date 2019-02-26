@@ -1,6 +1,6 @@
-# Publishing
+hackerbrief# Publishing
 
-[Twitter](https://twitter.com/sudoawesome) | [Medium](https://medium.com/@sudoawesome)
+[Twitter](https://twitter.com/hackerbrief) | [Medium](https://medium.com/@hackerbrief)
 
 Publishing Module for Ruby on Rails Model's.
 
