@@ -1,7 +1,5 @@
 hackerbrief# Publishing
 
-[Twitter](https://twitter.com/hackerbrief) | [Medium](https://medium.com/@hackerbrief)
-
 Publishing Module for Ruby on Rails Model's.
 
 * Publish Records with a Boolean and Datetime
